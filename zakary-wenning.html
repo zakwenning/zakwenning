@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zakary Wenning · Video / Photography</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Barlow+Condensed:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://player.vimeo.com/api/player.js"></script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy: #1b2d4f;
+  --navy-mid: #2d4a7a;
+  --steel: #8ab4d4;
+  --cream: #f5f0e8;
+  --cream-dark: #ede7da;
+  --cream-mid: #e0d8c8;
+  --warm-gray: #8a7f6e;
+  --warm-gray-light: #b8b0a0;
+  --rule: #c8c0b0;
+}
+html { scroll-behavior: smooth; }
+body {
+  background: var(--cream);
+  color: var(--navy);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--cream); border-bottom: 0.5px solid var(--rule);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2.5rem; height: 56px;
+}
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.nav-brand { display: flex; flex-direction: column; line-height: 1.15; }
+.nav-name { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; color: var(--navy); letter-spacing: 0.06em; text-transform: uppercase; }
+.nav-sub { font-family: 'DM Sans', sans-serif; font-size: 8px; letter-spacing: 0.16em; color: var(--warm-gray); text-transform: uppercase; }
+.nav-links { display: flex; align-items: center; gap: 1.75rem; list-style: none; }
+.nav-links a { font-family: 'DM Sans', sans-serif; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--warm-gray); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--navy); }
+.nav-book { font-family: 'Barlow Condensed', sans-serif !important; font-size: 11px !important; font-weight: 600 !important; letter-spacing: 0.12em !important; color: var(--cream) !important; background: var(--navy); padding: 7px 16px; border-radius: 2px; }
+.nav-book:hover { background: var(--navy-mid); color: var(--cream) !important; }
+
+/* ── HERO TOP ── */
+.hero-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 0.5px solid var(--rule);
+}
+.hero-left {
+  padding: 3.5rem 2.5rem 3rem;
+  display: flex; flex-direction: column; justify-content: space-between;
+  border-right: 0.5px solid var(--rule);
+}
+.hero-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 1.5rem; }
+.hero-eyebrow-line { width: 22px; height: 1.5px; background: var(--navy); flex-shrink: 0; }
+.hero-eyebrow-text { font-family: 'DM Sans', sans-serif; font-size: 9px; letter-spacing: 0.18em; color: var(--warm-gray); text-transform: uppercase; }
+.hero-headline { font-family: 'Playfair Display', serif; font-size: clamp(30px, 3.2vw, 52px); font-weight: 400; color: var(--navy); line-height: 1.08; letter-spacing: -0.02em; }
+.hero-headline em { font-style: italic; color: var(--navy-mid); }
+.hero-credentials { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; }
+.credentials-label { font-family: 'DM Sans', sans-serif; font-size: 8px; letter-spacing: 0.16em; color: var(--warm-gray-light); text-transform: uppercase; }
+.credentials-list { display: flex; flex-wrap: wrap; gap: 6px; }
+.cred-chip { font-family: 'DM Sans', sans-serif; font-size: 9px; letter-spacing: 0.07em; color: var(--navy); background: var(--cream-dark); border: 0.5px solid var(--rule); padding: 3px 10px; border-radius: 2px; }
+
+.hero-right {
+  padding: 3.5rem 2.5rem 3rem;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.hero-role-stack { display: flex; flex-direction: column; gap: 0; }
+.hero-role { font-family: 'Playfair Display', serif; font-size: clamp(22px, 2.6vw, 38px); font-weight: 400; color: var(--navy); line-height: 1.25; letter-spacing: -0.01em; border-bottom: 0.5px solid var(--rule); padding: 0.45rem 0; }
+.hero-role:last-child { border-bottom: none; }
+.hero-role em { font-style: italic; color: var(--warm-gray); }
+.hero-bottom-right { display: flex; align-items: flex-end; justify-content: space-between; padding-top: 2rem; border-top: 0.5px solid var(--rule); margin-top: 1.75rem; }
+.hero-years-num { font-family: 'Barlow Condensed', sans-serif; font-size: 56px; font-weight: 700; color: var(--navy); line-height: 1; letter-spacing: -0.02em; }
+.hero-years-label { font-family: 'DM Sans', sans-serif; font-size: 9px; letter-spacing: 0.14em; color: var(--warm-gray); text-transform: uppercase; margin-top: 3px; }
+.btn-primary { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); background: var(--navy); padding: 11px 24px; border-radius: 2px; text-decoration: none; transition: background 0.2s; }
+.btn-primary:hover { background: var(--navy-mid); }
+.btn-outline { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--navy); border: 0.5px solid var(--navy); padding: 10px 20px; border-radius: 2px; text-decoration: none; transition: all 0.2s; }
+.btn-outline:hover { background: var(--navy); color: var(--cream); }
+
+/* ── REEL BAND ── */
+.reel-band {
+  background: var(--navy);
+  padding: 2rem 2.5rem;
+  border-bottom: 0.5px solid var(--rule);
+  display: flex; flex-direction: column; gap: 1rem;
+}
+.reel-band-header { display: flex; align-items: center; justify-content: space-between; }
+.reel-band-tag { font-family: 'DM Sans', sans-serif; font-size: 8px; letter-spacing: 0.18em; color: var(--steel); text-transform: uppercase; display: flex; align-items: center; gap: 10px; }
+.reel-band-tag::before { content: ''; display: inline-block; width: 18px; height: 1px; background: var(--steel); }
+.reel-band-title { font-family: 'Playfair Display', serif; font-size: 13px; font-style: italic; color: rgba(245,240,232,0.5); }
+.reel-video-outer { width: 100%; position: relative; aspect-ratio: 16 / 9; background: #0d1824; overflow: hidden; border: 0.5px solid rgba(245,240,232,0.08); }
+.reel-video-outer iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; display: block; }
+
+/* ── SECTIONS ── */
+section { padding: 4rem 2.5rem; border-bottom: 0.5px solid var(--rule); }
+.section-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--rule); }
+.section-title { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 400; color: var(--navy); letter-spacing: -0.01em; }
+.section-title em { font-style: italic; }
+.section-count { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.12em; color: var(--warm-gray-light); text-transform: uppercase; }
+.section-link { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); text-decoration: none; border-bottom: 0.5px solid var(--navy); padding-bottom: 1px; }
+
+/* ── FILM GRID ── */
+.film-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 200px 150px; gap: 1px; background: var(--rule); border: 0.5px solid var(--rule); }
+.film-card { background: var(--navy); position: relative; overflow: hidden; cursor: pointer; }
+.film-card:nth-child(1) { grid-row: 1 / 3; background: #1a2840; }
+.film-card:nth-child(2) { background: #1e3055; }
+.film-card:nth-child(3) { background: #162238; }
+.film-card:nth-child(4) { background: #243858; }
+.film-card:nth-child(5) { background: #1a2d4a; }
+.film-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,22,35,0.85) 0%, transparent 55%); display: flex; flex-direction: column; justify-content: flex-end; padding: 1rem; }
+.film-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 38px; height: 38px; border: 0.5px solid rgba(245,240,232,0.25); border-radius: 50%; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.2s; }
+.film-card:hover .film-play { opacity: 1; }
+.film-play::after { content: ''; width: 0; height: 0; border-left: 10px solid rgba(245,240,232,0.8); border-top: 6px solid transparent; border-bottom: 6px solid transparent; margin-left: 3px; }
+.film-client { font-family: 'DM Sans', sans-serif; font-size: 8px; letter-spacing: 0.14em; color: var(--steel); text-transform: uppercase; margin-bottom: 3px; }
+.film-name { font-family: 'Playfair Display', serif; font-size: 13px; font-weight: 400; color: var(--cream); font-style: italic; }
+.film-card:nth-child(1) .film-name { font-size: 18px; }
+.film-type { font-family: 'DM Sans', sans-serif; font-size: 8px; color: rgba(245,240,232,0.4); letter-spacing: 0.08em; margin-top: 3px; }
+
+/* ── REAL ESTATE ── */
+.re-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 0.5px solid var(--rule); }
+.re-card { aspect-ratio: 4/3; position: relative; overflow: hidden; cursor: pointer; }
+.re-card:nth-child(1) { background: #d8d0c4; }
+.re-card:nth-child(2) { background: #ccc4b8; }
+.re-card:nth-child(3) { background: #e0d8cc; }
+.re-info { position: absolute; bottom: 0; left: 0; right: 0; background: var(--cream); border-top: 0.5px solid var(--rule); padding: 0.6rem 0.875rem; display: flex; align-items: center; justify-content: space-between; }
+.re-address { font-family: 'DM Sans', sans-serif; font-size: 10px; color: var(--navy); font-weight: 500; }
+.re-type { font-family: 'DM Sans', sans-serif; font-size: 8px; letter-spacing: 0.1em; color: var(--warm-gray); text-transform: uppercase; }
+.pixieset-note { margin-top: 1.25rem; padding: 0.875rem 1rem; background: var(--cream-dark); border: 0.5px solid var(--rule); border-left: 3px solid var(--navy); border-radius: 2px; display: flex; align-items: center; justify-content: space-between; }
+.pixieset-note-text { font-family: 'DM Sans', sans-serif; font-size: 11px; color: var(--warm-gray); }
+.pixieset-note-text strong { color: var(--navy); font-weight: 500; }
+.pixieset-btn { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); text-decoration: none; border-bottom: 0.5px solid var(--navy); padding-bottom: 1px; white-space: nowrap; }
+
+/* ── PHOTO GRID ── */
+.photo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule); border: 0.5px solid var(--rule); }
+.photo-card { aspect-ratio: 3/4; position: relative; overflow: hidden; cursor: pointer; }
+.photo-card:nth-child(1) { background: #c8c0b4; }
+.photo-card:nth-child(2) { background: #b8b0a4; }
+.photo-card:nth-child(3) { background: #cec6ba; }
+.photo-card:nth-child(4) { background: #d4ccc0; }
+.photo-fill { position: absolute; inset: 0; background: var(--navy); opacity: 0; transition: opacity 0.25s; display: flex; align-items: flex-end; padding: 0.875rem; }
+.photo-card:hover .photo-fill { opacity: 1; }
+.photo-caption { font-family: 'Playfair Display', serif; font-size: 12px; color: var(--cream); font-style: italic; }
+.photo-placeholder-text { position: absolute; bottom: 0.6rem; left: 0.6rem; font-family: 'DM Sans', sans-serif; font-size: 8px; letter-spacing: 0.1em; color: rgba(27,45,79,0.4); text-transform: uppercase; }
+
+/* ── ABOUT ── */
+.about-section { display: grid; grid-template-columns: 320px 1fr; gap: 4rem; align-items: start; }
+.about-photo-frame { width: 100%; aspect-ratio: 3/4; background: var(--navy); border-radius: 2px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.about-photo-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.about-photo-tag { position: absolute; top: 1rem; left: 1rem; font-family: 'DM Sans', sans-serif; font-size: 8px; letter-spacing: 0.14em; color: var(--steel); text-transform: uppercase; z-index: 1; }
+.about-tagline { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 400; color: var(--navy); line-height: 1.25; letter-spacing: -0.01em; margin-bottom: 1.25rem; }
+.about-tagline em { font-style: italic; }
+.about-body { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--warm-gray); line-height: 1.8; margin-bottom: 1.5rem; }
+.about-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 0.5px solid var(--rule); margin-bottom: 1.5rem; }
+.about-stat { background: var(--cream-dark); padding: 1rem; text-align: center; }
+.stat-num { font-family: 'Barlow Condensed', sans-serif; font-size: 30px; font-weight: 700; color: var(--navy); line-height: 1; letter-spacing: 0.02em; }
+.stat-label { font-family: 'DM Sans', sans-serif; font-size: 9px; letter-spacing: 0.1em; color: var(--warm-gray); text-transform: uppercase; margin-top: 3px; }
+.about-clients-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.about-chip { font-family: 'DM Sans', sans-serif; font-size: 9px; letter-spacing: 0.06em; color: var(--navy); background: var(--cream-mid); border: 0.5px solid var(--rule); padding: 4px 10px; border-radius: 2px; }
+
+/* ── BOOK ── */
+.book-section { background: var(--navy); display: grid; grid-template-columns: 1fr 1fr; padding: 0; border-bottom: none; }
+.book-left { padding: 4rem 2.5rem; display: flex; flex-direction: column; justify-content: center; border-right: 0.5px solid rgba(245,240,232,0.1); }
+.book-eyebrow { font-family: 'DM Sans', sans-serif; font-size: 8px; letter-spacing: 0.18em; color: var(--steel); text-transform: uppercase; margin-bottom: 1rem; display: flex; align-items: center; gap: 10px; }
+.book-eyebrow::before { content: ''; display: inline-block; width: 18px; height: 1px; background: var(--steel); }
+.book-headline { font-family: 'Playfair Display', serif; font-size: 34px; font-weight: 400; color: var(--cream); line-height: 1.1; letter-spacing: -0.01em; margin-bottom: 1rem; }
+.book-headline em { font-style: italic; color: var(--steel); }
+.book-body { font-family: 'DM Sans', sans-serif; font-size: 12px; color: rgba(245,240,232,0.5); line-height: 1.8; max-width: 380px; margin-bottom: 1.75rem; }
+.book-email-link { display: inline-flex; align-items: center; gap: 8px; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cream); text-decoration: none; border-bottom: 0.5px solid rgba(245,240,232,0.3); padding-bottom: 3px; }
+.book-right { padding: 4rem 2.5rem; display: flex; flex-direction: column; gap: 1.75rem; }
+.book-service { padding-bottom: 1.75rem; border-bottom: 0.5px solid rgba(245,240,232,0.1); }
+.book-service:last-child { border-bottom: none; padding-bottom: 0; }
+.book-service-name { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--steel); margin-bottom: 5px; }
+.book-service-desc { font-family: 'DM Sans', sans-serif; font-size: 11px; color: rgba(245,240,232,0.4); line-height: 1.7; }
+
+/* ── FOOTER ── */
+footer { background: var(--cream-dark); border-top: 0.5px solid var(--rule); padding: 1.5rem 2.5rem; display: flex; align-items: center; justify-content: space-between; }
+.footer-name { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; color: var(--navy); letter-spacing: 0.06em; text-transform: uppercase; }
+.footer-copy { font-family: 'DM Sans', sans-serif; font-size: 10px; color: var(--warm-gray-light); letter-spacing: 0.04em; }
+.footer-links { display: flex; gap: 1.25rem; }
+.footer-links a { font-family: 'DM Sans', sans-serif; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--warm-gray); text-decoration: none; }
+.footer-links a:hover { color: var(--navy); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <svg height="34" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right:2px;">
+      <path d="M42 28 L42 22 Q42 18 46 18 L54 18 Q58 18 58 22 L58 28 Z" fill="#1b2d4f"/>
+      <rect x="60" y="20" width="8" height="5" rx="2" fill="#1b2d4f"/>
+      <rect x="18" y="28" width="84" height="52" rx="8" fill="none" stroke="#1b2d4f" stroke-width="4"/>
+      <path d="M22 68 Q30 62 38 68 Q46 74 54 68" stroke="#1b2d4f" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.5"/>
+      <path d="M18 76 Q28 70 38 76 Q48 82 58 76" stroke="#1b2d4f" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.35"/>
+      <circle cx="68" cy="52" r="18" fill="none" stroke="#1b2d4f" stroke-width="4"/>
+      <path d="M68 38 Q68 48 60 54 Q54 58 56 64 Q58 70 64 68" stroke="#1b2d4f" stroke-width="3" stroke-linecap="round" fill="none"/>
+      <circle cx="68" cy="37" r="2.5" fill="#1b2d4f"/>
+    </svg>
+    <div class="nav-brand">
+      <span class="nav-name">Zakary Wenning</span>
+      <span class="nav-sub">Video / Photography</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#film">Film</a></li>
+    <li><a href="#realestate">Real Estate</a></li>
+    <li><a href="#photo">Photo</a></li>
+    <li><a href="#book" class="nav-book">Book Me</a></li>
+  </ul>
+</nav>
+
+<!-- HERO TOP -->
+<div class="hero-top" id="work">
+  <div class="hero-left">
+    <div>
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-line" style="width:22px;height:1.5px;background:var(--navy);flex-shrink:0;"></div>
+        <span class="hero-eyebrow-text">Washington DC · Northern Virginia · Maryland</span>
+      </div>
+      <h1 class="hero-headline">
+        Trusted by the<br>
+        world's most<br>
+        <em>curious storytellers</em>
+      </h1>
+      <div class="hero-credentials">
+        <div class="credentials-label">Featured clients &amp; partners</div>
+        <div class="credentials-list">
+          <span class="cred-chip">National Geographic</span>
+          <span class="cred-chip">Smithsonian</span>
+          <span class="cred-chip">Discovery</span>
+          <span class="cred-chip">CuriosityStream</span>
+          <span class="cred-chip">Hilton</span>
+          <span class="cred-chip">Marriott</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-role-stack">
+      <div class="hero-role">Director</div>
+      <div class="hero-role"><em>Videographer</em></div>
+      <div class="hero-role">Editor</div>
+      <div class="hero-role"><em>Photographer</em></div>
+    </div>
+    <div class="hero-bottom-right">
+      <div>
+        <div class="hero-years-num">15+</div>
+        <div class="hero-years-label">Years of professional work</div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:8px; align-items:flex-end;">
+        <a href="#book" class="btn-primary">Book a Project</a>
+        <a href="#reel" class="btn-outline">View Reel ↓</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- REEL BAND -->
+<div class="reel-band" id="reel">
+  <div class="reel-band-header">
+    <div class="reel-band-tag">Showreel 2025</div>
+    <div class="reel-band-title">Zak Wenning's Reel 2025 · Director · Videographer · Editor · Photographer</div>
+  </div>
+  <div class="reel-video-outer">
+    <iframe
+      src="https://player.vimeo.com/video/334055380?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
+      frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      title="Zak Wenning's Reel 2025"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+<!-- FILM -->
+<section id="film">
+  <div class="section-header">
+    <div>
+      <div class="section-count">01 — Film &amp; Video</div>
+      <h2 class="section-title">Stories in <em>motion</em></h2>
+    </div>
+    <a href="https://vimeo.com/zakarywenning" class="section-link">View on Vimeo →</a>
+  </div>
+  <div class="film-grid">
+    <div class="film-card">
+      <div class="film-play"></div>
+      <div class="film-overlay">
+        <div class="film-client">National Geographic</div>
+        <div class="film-name">Into the Deep Current</div>
+        <div class="film-type">Documentary · Director · Editor</div>
+      </div>
+    </div>
+    <div class="film-card">
+      <div class="film-play"></div>
+      <div class="film-overlay">
+        <div class="film-client">Smithsonian</div>
+        <div class="film-name">Migrations</div>
+        <div class="film-type">Documentary</div>
+      </div>
+    </div>
+    <div class="film-card">
+      <div class="film-play"></div>
+      <div class="film-overlay">
+        <div class="film-client">Discovery</div>
+        <div class="film-name">Edge of Wild</div>
+        <div class="film-type">Documentary · Editor</div>
+      </div>
+    </div>
+    <div class="film-card">
+      <div class="film-play"></div>
+      <div class="film-overlay">
+        <div class="film-client">CuriosityStream</div>
+        <div class="film-name">Ancient Waters</div>
+        <div class="film-type">Documentary</div>
+      </div>
+    </div>
+    <div class="film-card">
+      <div class="film-play"></div>
+      <div class="film-overlay">
+        <div class="film-client">Hilton Hotels</div>
+        <div class="film-name">Welcome Home</div>
+        <div class="film-type">Commercial</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REAL ESTATE -->
+<section id="realestate" style="background: var(--cream-dark);">
+  <div class="section-header">
+    <div>
+      <div class="section-count">02 — Real Estate</div>
+      <h2 class="section-title">Properties that <em>sell</em></h2>
+    </div>
+    <a href="https://pixieset.com" class="section-link">Full catalog on Pixieset →</a>
+  </div>
+  <div class="re-grid">
+    <div class="re-card"><div class="re-info"><span class="re-address">123 Lakefront Drive</span><span class="re-type">Residential</span></div></div>
+    <div class="re-card"><div class="re-info"><span class="re-address">440 Commerce Blvd</span><span class="re-type">Commercial</span></div></div>
+    <div class="re-card"><div class="re-info"><span class="re-address">88 Maple Ridge Ct</span><span class="re-type">Residential</span></div></div>
+  </div>
+  <div class="pixieset-note">
+    <span class="pixieset-note-text">Full real estate portfolio hosted on <strong>Pixieset</strong> — high-resolution galleries available for agents and developers.</span>
+    <a href="https://pixieset.com" class="pixieset-btn">Browse Full Gallery →</a>
+  </div>
+</section>
+
+<!-- PHOTOGRAPHY -->
+<section id="photo">
+  <div class="section-header">
+    <div>
+      <div class="section-count">03 — Photography</div>
+      <h2 class="section-title">Still &amp; <em>portrait</em></h2>
+    </div>
+    <a href="#book" class="section-link">Book a session →</a>
+  </div>
+  <div class="photo-grid">
+    <div class="photo-card">
+      <div class="photo-placeholder-text">Portrait</div>
+      <div class="photo-fill"><div class="photo-caption">Environmental Portrait</div></div>
+    </div>
+    <div class="photo-card">
+      <div class="photo-placeholder-text">Portrait</div>
+      <div class="photo-fill"><div class="photo-caption">Natural Light</div></div>
+    </div>
+    <div class="photo-card">
+      <div class="photo-placeholder-text">Portrait</div>
+      <div class="photo-fill"><div class="photo-caption">Editorial</div></div>
+    </div>
+    <div class="photo-card">
+      <div class="photo-placeholder-text">Portrait</div>
+      <div class="photo-fill"><div class="photo-caption">Location</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" style="background: var(--cream-dark);">
+  <div class="section-header">
+    <div>
+      <div class="section-count">04 — About</div>
+      <h2 class="section-title">The <em>person</em> behind the lens</h2>
+    </div>
+  </div>
+  <div class="about-section">
+    <div>
+      <div class="about-photo-frame">
+        <img src="zak-headshot.jpg" alt="Zakary Wenning · Director · Photographer">
+        <div class="about-photo-tag">Zakary Wenning · Director · DP</div>
+      </div>
+    </div>
+    <div>
+      <div class="about-tagline">I've spent 15 years making<br>the world <em>stop and look.</em></div>
+      <p class="about-body">From the ocean floors documented for National Geographic to the halls of the Smithsonian and the luxury properties of Hilton and Marriott — I bring the same obsessive attention to light, motion, and story to every frame. Based in the Washington DC area, serving Virginia, Maryland, and beyond.</p>
+      <p class="about-body" style="margin-top:-0.75rem;">Whether you need a documentary series, a brand film, real estate photography that moves listings, or portraits that actually feel like the person — I'm the call you make when the work has to be right.</p>
+      <div class="about-stats">
+        <div class="about-stat"><div class="stat-num">15+</div><div class="stat-label">Years shooting</div></div>
+        <div class="about-stat"><div class="stat-num">10+</div><div class="stat-label">Years at Nat Geo</div></div>
+        <div class="about-stat"><div class="stat-num">5</div><div class="stat-label">Years CuriosityStream</div></div>
+      </div>
+      <div class="about-clients-row">
+        <span class="about-chip">National Geographic</span>
+        <span class="about-chip">Smithsonian</span>
+        <span class="about-chip">Discovery</span>
+        <span class="about-chip">CuriosityStream</span>
+        <span class="about-chip">Hilton</span>
+        <span class="about-chip">Marriott</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK -->
+<section id="book" class="book-section">
+  <div class="book-left">
+    <div class="book-eyebrow">Book a Project</div>
+    <h2 class="book-headline">Let's make<br>something <em>worth</em><br>watching.</h2>
+    <p class="book-body">Available for documentary production, commercial video, real estate photography, and portrait sessions. Washington DC, Northern Virginia, Maryland — and worldwide on request.</p>
+    <a href="mailto:zakary@zakarywenning.com" class="book-email-link">zakary@zakarywenning.com ↗</a>
+  </div>
+  <div class="book-right">
+    <div class="book-service">
+      <div class="book-service-name">Film &amp; Video Production</div>
+      <div class="book-service-desc">Documentary, commercial, branded content, and social video. Full production or post-production only.</div>
+    </div>
+    <div class="book-service">
+      <div class="book-service-name">Real Estate Photography</div>
+      <div class="book-service-desc">Residential and commercial property. Interior, exterior, aerial available. Delivered gallery-ready via Pixieset.</div>
+    </div>
+    <div class="book-service">
+      <div class="book-service-name">Portrait Photography</div>
+      <div class="book-service-desc">Corporate headshots, editorial portraits, personal branding sessions. Studio or on location.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">Zakary Wenning · Video / Photography</div>
+  <div class="footer-copy">© 2026 · Washington DC Area</div>
+  <div class="footer-links">
+    <a href="https://vimeo.com">Vimeo</a>
+    <a href="https://pixieset.com">Pixieset</a>
+    <a href="mailto:zakary@zakarywenning.com">Email</a>
+  </div>
+</footer>
+
+</body>
+</html>
