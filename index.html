@@ -128,10 +128,10 @@ section { padding: 4rem 2.5rem; border-bottom: 0.5px solid var(--rule); }
 
 /* ── REAL ESTATE ── */
 .re-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 0.5px solid var(--rule); }
-.re-card { aspect-ratio: 4/3; position: relative; overflow: hidden; cursor: pointer; text-decoration: none; display: block; }
-.re-card:nth-child(1) { background: #d8d0c4; }
-.re-card:nth-child(2) { background: #ccc4b8; }
-.re-card:nth-child(3) { background: #e0d8cc; }
+.re-card { aspect-ratio: 4/3; position: relative; overflow: hidden; cursor: pointer; text-decoration: none; display: block; background: var(--cream-dark); }
+.re-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s; }
+.re-card:hover img { transform: scale(1.04); }
+.re-info { z-index: 1; }
 .re-info { position: absolute; bottom: 0; left: 0; right: 0; background: var(--cream); border-top: 0.5px solid var(--rule); padding: 0.6rem 0.875rem; display: flex; align-items: center; justify-content: space-between; }
 .re-address { font-family: 'DM Sans', sans-serif; font-size: 10px; color: var(--navy); font-weight: 500; }
 .re-type { font-family: 'DM Sans', sans-serif; font-size: 8px; letter-spacing: 0.1em; color: var(--warm-gray); text-transform: uppercase; }
@@ -388,9 +388,9 @@ footer { background: var(--cream-dark); border-top: 0.5px solid var(--rule); pad
     <a href="https://zakwenningphotography.pixieset.com/" target="_blank" rel="noopener" class="section-link">Full catalog on Pixieset →</a>
   </div>
   <div class="re-grid">
-    <a class="re-card" href="https://zakwenningphotography.pixieset.com/5904grovesnor/" target="_blank" rel="noopener"><div class="re-info"><span class="re-address">5904 Grosvenor Lane</span><span class="re-type">Residential</span></div></a>
-    <a class="re-card" href="https://zakwenningphotography.pixieset.com/5401glenwood/" target="_blank" rel="noopener"><div class="re-info"><span class="re-address">5401 Glenwood Road</span><span class="re-type">Residential</span></div></a>
-    <a class="re-card" href="https://zakwenningphotography.pixieset.com/6304alcottrd/" target="_blank" rel="noopener"><div class="re-info"><span class="re-address">6304 Alcott Road</span><span class="re-type">Residential</span></div></a>
+    <a class="re-card" href="https://zakwenningphotography.pixieset.com/5904grovesnor/" target="_blank" rel="noopener"><img src="re-grosvenor.jpg" alt="5904 Grosvenor Lane" loading="lazy"><div class="re-info"><span class="re-address">5904 Grosvenor Lane</span><span class="re-type">Residential</span></div></a>
+    <a class="re-card" href="https://zakwenningphotography.pixieset.com/5401glenwood/" target="_blank" rel="noopener"><img src="re-glenwood.jpg" alt="5401 Glenwood Road" loading="lazy"><div class="re-info"><span class="re-address">5401 Glenwood Road</span><span class="re-type">Residential</span></div></a>
+    <a class="re-card" href="https://zakwenningphotography.pixieset.com/6304alcottrd/" target="_blank" rel="noopener"><img src="re-alcott.jpg" alt="6304 Alcott Road" loading="lazy"><div class="re-info"><span class="re-address">6304 Alcott Road</span><span class="re-type">Residential</span></div></a>
   </div>
   <div class="pixieset-note">
     <span class="pixieset-note-text">Full real estate portfolio hosted on <strong>Pixieset</strong> — high-resolution galleries available for agents and developers.</span>
