@@ -107,7 +107,7 @@ section { padding: 4rem 2.5rem; border-bottom: 0.5px solid var(--rule); }
 .section-link { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); text-decoration: none; border-bottom: 0.5px solid var(--navy); padding-bottom: 1px; }
 
 /* ── FILM GRID ── */
-.film-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 200px 150px 150px; gap: 1px; background: var(--rule); border: 0.5px solid var(--rule); }
+.film-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 175px 175px 150px 150px; gap: 1px; background: var(--rule); border: 0.5px solid var(--rule); }
 .film-card { background: var(--navy); position: relative; overflow: hidden; cursor: pointer; text-decoration: none; display: block; }
 .film-thumb { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transition: opacity 0.4s; }
 .film-thumb.loaded { opacity: 1; }
@@ -128,7 +128,7 @@ section { padding: 4rem 2.5rem; border-bottom: 0.5px solid var(--rule); }
 
 /* ── REAL ESTATE ── */
 .re-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 0.5px solid var(--rule); }
-.re-card { aspect-ratio: 4/3; position: relative; overflow: hidden; cursor: pointer; }
+.re-card { aspect-ratio: 4/3; position: relative; overflow: hidden; cursor: pointer; text-decoration: none; display: block; }
 .re-card:nth-child(1) { background: #d8d0c4; }
 .re-card:nth-child(2) { background: #ccc4b8; }
 .re-card:nth-child(3) { background: #e0d8cc; }
@@ -141,13 +141,11 @@ section { padding: 4rem 2.5rem; border-bottom: 0.5px solid var(--rule); }
 .pixieset-btn { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); text-decoration: none; border-bottom: 0.5px solid var(--navy); padding-bottom: 1px; white-space: nowrap; }
 
 /* ── PHOTO GRID ── */
-.photo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule); border: 0.5px solid var(--rule); }
-.photo-card { aspect-ratio: 3/4; position: relative; overflow: hidden; cursor: pointer; }
-.photo-card:nth-child(1) { background: #c8c0b4; }
-.photo-card:nth-child(2) { background: #b8b0a4; }
-.photo-card:nth-child(3) { background: #cec6ba; }
-.photo-card:nth-child(4) { background: #d4ccc0; }
-.photo-fill { position: absolute; inset: 0; background: var(--navy); opacity: 0; transition: opacity 0.25s; display: flex; align-items: flex-end; padding: 0.875rem; }
+.photo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--rule); border: 0.5px solid var(--rule); }
+.photo-card { aspect-ratio: 3/2; position: relative; overflow: hidden; cursor: pointer; background: var(--cream-dark); }
+.photo-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s; }
+.photo-card:hover img { transform: scale(1.04); }
+.photo-fill { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,45,79,0.55) 0%, transparent 50%); opacity: 0; transition: opacity 0.25s; display: flex; align-items: flex-end; padding: 0.875rem; z-index: 1; }
 .photo-card:hover .photo-fill { opacity: 1; }
 .photo-caption { font-family: 'Playfair Display', serif; font-size: 12px; color: var(--cream); font-style: italic; }
 .photo-placeholder-text { position: absolute; bottom: 0.6rem; left: 0.6rem; font-family: 'DM Sans', sans-serif; font-size: 8px; letter-spacing: 0.1em; color: rgba(27,45,79,0.4); text-transform: uppercase; }
@@ -321,14 +319,14 @@ footer { background: var(--cream-dark); border-top: 0.5px solid var(--rule); pad
       <div class="film-overlay">
         <div class="film-client">Hilton</div>
         <div class="film-name">Commercial Services</div>
-        <div class="film-type">Commercial · Director</div>
+        <div class="film-type">Commercial · Director · Videographer</div>
       </div>
     </div>
     <div class="film-card" data-vimeo="1114300880">
       <div class="film-thumb"></div>
       <div class="film-play"></div>
       <div class="film-overlay">
-        <div class="film-client">Real Estate</div>
+        <div class="film-client">SDR Properties</div>
         <div class="film-name">Developer Highlight</div>
         <div class="film-type">Commercial · Videographer</div>
       </div>
@@ -339,7 +337,7 @@ footer { background: var(--cream-dark); border-top: 0.5px solid var(--rule); pad
       <div class="film-overlay">
         <div class="film-client">Cinematic</div>
         <div class="film-name">Ventnor Cinematic Video</div>
-        <div class="film-type">Director · Editor</div>
+        <div class="film-type">Director · Videographer · Editor</div>
       </div>
     </div>
     <div class="film-card" data-vimeo="1203316707">
@@ -348,7 +346,7 @@ footer { background: var(--cream-dark); border-top: 0.5px solid var(--rule); pad
       <div class="film-overlay">
         <div class="film-client">BREM</div>
         <div class="film-name">20th Anniversary</div>
-        <div class="film-type">Documentary · Director</div>
+        <div class="film-type">Documentary · Director · Videographer</div>
       </div>
     </div>
     <div class="film-card" data-vimeo="160668416">
@@ -358,6 +356,15 @@ footer { background: var(--cream-dark); border-top: 0.5px solid var(--rule); pad
         <div class="film-client">National Geographic</div>
         <div class="film-name">Wicked Tuna</div>
         <div class="film-type">Documentary · Editor</div>
+      </div>
+    </div>
+    <div class="film-card" data-vimeo="1010720877">
+      <div class="film-thumb"></div>
+      <div class="film-play"></div>
+      <div class="film-overlay">
+        <div class="film-client">Bass Pro Shops</div>
+        <div class="film-name">Commercial</div>
+        <div class="film-type">Commercial · Videographer</div>
       </div>
     </div>
   </div>
@@ -378,16 +385,16 @@ footer { background: var(--cream-dark); border-top: 0.5px solid var(--rule); pad
       <div class="section-count">02 — Real Estate</div>
       <h2 class="section-title">Properties that <em>sell</em></h2>
     </div>
-    <a href="https://pixieset.com" class="section-link">Full catalog on Pixieset →</a>
+    <a href="https://zakwenningphotography.pixieset.com/" target="_blank" rel="noopener" class="section-link">Full catalog on Pixieset →</a>
   </div>
   <div class="re-grid">
-    <div class="re-card"><div class="re-info"><span class="re-address">123 Lakefront Drive</span><span class="re-type">Residential</span></div></div>
-    <div class="re-card"><div class="re-info"><span class="re-address">440 Commerce Blvd</span><span class="re-type">Commercial</span></div></div>
-    <div class="re-card"><div class="re-info"><span class="re-address">88 Maple Ridge Ct</span><span class="re-type">Residential</span></div></div>
+    <a class="re-card" href="https://zakwenningphotography.pixieset.com/5904grovesnor/" target="_blank" rel="noopener"><div class="re-info"><span class="re-address">5904 Grosvenor Lane</span><span class="re-type">Residential</span></div></a>
+    <a class="re-card" href="https://zakwenningphotography.pixieset.com/5401glenwood/" target="_blank" rel="noopener"><div class="re-info"><span class="re-address">5401 Glenwood Road</span><span class="re-type">Residential</span></div></a>
+    <a class="re-card" href="https://zakwenningphotography.pixieset.com/6304alcottrd/" target="_blank" rel="noopener"><div class="re-info"><span class="re-address">6304 Alcott Road</span><span class="re-type">Residential</span></div></a>
   </div>
   <div class="pixieset-note">
     <span class="pixieset-note-text">Full real estate portfolio hosted on <strong>Pixieset</strong> — high-resolution galleries available for agents and developers.</span>
-    <a href="https://pixieset.com" class="pixieset-btn">Browse Full Gallery →</a>
+    <a href="https://zakwenningphotography.pixieset.com/" target="_blank" rel="noopener" class="pixieset-btn">Browse Full Gallery →</a>
   </div>
 </section>
 
@@ -401,22 +408,26 @@ footer { background: var(--cream-dark); border-top: 0.5px solid var(--rule); pad
     <a href="#book" class="section-link">Book a session →</a>
   </div>
   <div class="photo-grid">
-    <div class="photo-card">
-      <div class="photo-placeholder-text">Portrait</div>
+    <div class="photo-card" data-img="portrait-1.jpg">
+      <img src="portrait-1.jpg" alt="Environmental portrait — forest" loading="lazy">
       <div class="photo-fill"><div class="photo-caption">Environmental Portrait</div></div>
     </div>
-    <div class="photo-card">
-      <div class="photo-placeholder-text">Portrait</div>
+    <div class="photo-card" data-img="portrait-2.jpg">
+      <img src="portrait-2.jpg" alt="Natural light portrait" loading="lazy">
       <div class="photo-fill"><div class="photo-caption">Natural Light</div></div>
     </div>
-    <div class="photo-card">
-      <div class="photo-placeholder-text">Portrait</div>
+    <div class="photo-card" data-img="portrait-3.jpg">
+      <img src="portrait-3.jpg" alt="Editorial senior portrait" loading="lazy">
       <div class="photo-fill"><div class="photo-caption">Editorial</div></div>
     </div>
-    <div class="photo-card">
-      <div class="photo-placeholder-text">Portrait</div>
-      <div class="photo-fill"><div class="photo-caption">Location</div></div>
+    <div class="photo-card" data-img="portrait-4.jpg">
+      <img src="portrait-4.jpg" alt="Studio portrait" loading="lazy">
+      <div class="photo-fill"><div class="photo-caption">Studio</div></div>
     </div>
+  </div>
+  <div class="pixieset-note" style="margin-top:1.25rem;">
+    <span class="pixieset-note-text">A selection of recent portrait work. <strong>Available for headshots, editorial portraits, and personal branding sessions.</strong></span>
+    <a href="#book" class="pixieset-btn">Book a Session →</a>
   </div>
 </section>
 
@@ -486,7 +497,7 @@ footer { background: var(--cream-dark); border-top: 0.5px solid var(--rule); pad
   <div class="footer-copy">© 2026 · Washington DC Area</div>
   <div class="footer-links">
     <a href="https://vimeo.com">Vimeo</a>
-    <a href="https://pixieset.com">Pixieset</a>
+    <a href="https://zakwenningphotography.pixieset.com/" target="_blank" rel="noopener">Pixieset</a>
     <a href="mailto:zakary@zakarywenning.com">Email</a>
   </div>
 </footer>
@@ -516,6 +527,7 @@ footer { background: var(--cream-dark); border-top: 0.5px solid var(--rule); pad
   var closeBtn = lightbox.querySelector('.video-lightbox-close');
 
   function openVideo(id) {
+    frame.style.aspectRatio = '16/9';
     frame.innerHTML = '<iframe src="https://player.vimeo.com/video/' + id +
       '?autoplay=1&title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
     lightbox.classList.add('open');
@@ -530,6 +542,19 @@ footer { background: var(--cream-dark); border-top: 0.5px solid var(--rule); pad
   document.querySelectorAll('.film-card[data-vimeo]').forEach(function (card) {
     card.addEventListener('click', function () {
       openVideo(card.getAttribute('data-vimeo'));
+    });
+  });
+
+  // Photo lightbox — reuse the same overlay for images
+  function openImage(src) {
+    frame.style.aspectRatio = '3/2';
+    frame.innerHTML = '<img src="' + src + '" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000;">';
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  document.querySelectorAll('.photo-card[data-img]').forEach(function (card) {
+    card.addEventListener('click', function () {
+      openImage(card.getAttribute('data-img'));
     });
   });
   closeBtn.addEventListener('click', closeVideo);
