@@ -107,7 +107,7 @@ section { padding: 4rem 2.5rem; border-bottom: 0.5px solid var(--rule); }
 .section-link { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); text-decoration: none; border-bottom: 0.5px solid var(--navy); padding-bottom: 1px; }
 
 /* ── FILM GRID ── */
-.film-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 175px 175px 150px 150px; gap: 1px; background: var(--rule); border: 0.5px solid var(--rule); }
+.film-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 190px 190px 190px; gap: 1px; background: var(--rule); border: 0.5px solid var(--rule); }
 .film-card { background: var(--navy); position: relative; overflow: hidden; cursor: pointer; text-decoration: none; display: block; }
 .film-thumb { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transition: opacity 0.4s; }
 .film-thumb.loaded { opacity: 1; }
@@ -208,6 +208,64 @@ footer { background: var(--cream-dark); border-top: 0.5px solid var(--rule); pad
   font-family: 'DM Sans', sans-serif; opacity: 0.7; transition: opacity 0.2s;
 }
 .video-lightbox-close:hover { opacity: 1; }
+
+/* ── MOBILE RESPONSIVE ── */
+@media (max-width: 768px) {
+  nav { padding: 0 1.25rem; height: 54px; }
+  .nav-links { gap: 0.85rem; }
+  .nav-links a { font-size: 9px; letter-spacing: 0.05em; }
+  .nav-links li:nth-child(2), .nav-links li:nth-child(3), .nav-links li:nth-child(4) { display: none; }
+  .nav-name { font-size: 13px; }
+  .nav-sub { font-size: 7px; }
+
+  /* Hero stacks */
+  .hero-top { grid-template-columns: 1fr; }
+  .hero-left { border-right: none; border-bottom: 0.5px solid var(--rule); padding: 2.5rem 1.5rem; }
+  .hero-right { padding: 2.5rem 1.5rem; }
+  .hero-headline { font-size: 34px; }
+  .hero-role { font-size: 26px; padding: 0.4rem 0; }
+  .hero-years-num { font-size: 48px; }
+
+  /* Reel band */
+  .reel-band { padding: 1.5rem 1.25rem; }
+  .reel-band-header { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .reel-band-title { font-size: 11px; }
+
+  /* Sections */
+  section { padding: 2.5rem 1.25rem; }
+  .section-header { margin-bottom: 1.5rem; }
+  .section-title { font-size: 24px; }
+
+  /* Film grid → single column, even heights, no tall card */
+  .film-grid { grid-template-columns: 1fr; grid-template-rows: none; }
+  .film-card { aspect-ratio: 16/9; }
+  .film-card:nth-child(1) { grid-row: auto; }
+  .film-card:nth-child(1) .film-name { font-size: 15px; }
+
+  /* Real estate → single column, taller so title bar never covers image */
+  .re-grid { grid-template-columns: 1fr; }
+  .re-card { aspect-ratio: 16/10; }
+
+  /* Photo grid → single column */
+  .photo-grid { grid-template-columns: 1fr; }
+
+  /* About stacks */
+  .about-section { grid-template-columns: 1fr; gap: 2rem; }
+  .about-photo-frame { max-width: 320px; }
+  .about-tagline { font-size: 22px; }
+
+  /* Book stacks */
+  .book-section { grid-template-columns: 1fr; }
+  .book-left { border-right: none; border-bottom: 0.5px solid rgba(245,240,232,0.1); padding: 2.5rem 1.5rem; }
+  .book-right { padding: 2.5rem 1.5rem; }
+  .book-headline { font-size: 30px; }
+
+  /* Footer stacks */
+  footer { flex-direction: column; gap: 0.75rem; text-align: center; padding: 1.5rem 1.25rem; }
+
+  /* Lightbox close button sits inside on mobile */
+  .video-lightbox-close { top: -36px; }
+}
 </style>
 </head>
 <body>
@@ -280,7 +338,7 @@ footer { background: var(--cream-dark); border-top: 0.5px solid var(--rule); pad
 <div class="reel-band" id="reel">
   <div class="reel-band-header">
     <div class="reel-band-tag">Showreel 2025</div>
-    <div class="reel-band-title">Zak Wenning's Reel 2025 · Director · Videographer · Editor · Photographer</div>
+    <div class="reel-band-title">Zak Wenning's Reel 2025 · Director · Editor · Photographer</div>
   </div>
   <div class="reel-video-outer">
     <iframe
@@ -319,7 +377,7 @@ footer { background: var(--cream-dark); border-top: 0.5px solid var(--rule); pad
       <div class="film-overlay">
         <div class="film-client">Hilton</div>
         <div class="film-name">Commercial Services</div>
-        <div class="film-type">Commercial · Director · Videographer</div>
+        <div class="film-type">Commercial · Director</div>
       </div>
     </div>
     <div class="film-card" data-vimeo="1114300880">
@@ -328,7 +386,7 @@ footer { background: var(--cream-dark); border-top: 0.5px solid var(--rule); pad
       <div class="film-overlay">
         <div class="film-client">SDR Properties</div>
         <div class="film-name">Developer Highlight</div>
-        <div class="film-type">Commercial · Videographer</div>
+        <div class="film-type">Commercial</div>
       </div>
     </div>
     <div class="film-card" data-vimeo="1037293622">
@@ -337,7 +395,7 @@ footer { background: var(--cream-dark); border-top: 0.5px solid var(--rule); pad
       <div class="film-overlay">
         <div class="film-client">Cinematic</div>
         <div class="film-name">Ventnor Cinematic Video</div>
-        <div class="film-type">Director · Videographer · Editor</div>
+        <div class="film-type">Director · Editor</div>
       </div>
     </div>
     <div class="film-card" data-vimeo="1203316707">
@@ -346,7 +404,7 @@ footer { background: var(--cream-dark); border-top: 0.5px solid var(--rule); pad
       <div class="film-overlay">
         <div class="film-client">BREM</div>
         <div class="film-name">20th Anniversary</div>
-        <div class="film-type">Documentary · Director · Videographer</div>
+        <div class="film-type">Documentary · Director</div>
       </div>
     </div>
     <div class="film-card" data-vimeo="160668416">
@@ -364,7 +422,16 @@ footer { background: var(--cream-dark); border-top: 0.5px solid var(--rule); pad
       <div class="film-overlay">
         <div class="film-client">Bass Pro Shops</div>
         <div class="film-name">Commercial</div>
-        <div class="film-type">Commercial · Videographer</div>
+        <div class="film-type">Commercial</div>
+      </div>
+    </div>
+    <div class="film-card" data-vimeo="275910836">
+      <div class="film-thumb"></div>
+      <div class="film-play"></div>
+      <div class="film-overlay">
+        <div class="film-client">Documentary</div>
+        <div class="film-name">Pawn Sunday</div>
+        <div class="film-type">Documentary · Director · Editor</div>
       </div>
     </div>
   </div>
@@ -473,7 +540,7 @@ footer { background: var(--cream-dark); border-top: 0.5px solid var(--rule); pad
     <div class="book-eyebrow">Book a Project</div>
     <h2 class="book-headline">Let's make<br>something <em>worth</em><br>watching.</h2>
     <p class="book-body">Available for documentary production, commercial video, real estate photography, and portrait sessions. Washington DC, Northern Virginia, Maryland — and worldwide on request.</p>
-    <a href="mailto:zakary@zakarywenning.com" class="book-email-link">zakary@zakarywenning.com ↗</a>
+    <a href="mailto:zakwenning@gmail.com" class="book-email-link">zakwenning@gmail.com ↗</a>
   </div>
   <div class="book-right">
     <div class="book-service">
@@ -498,7 +565,7 @@ footer { background: var(--cream-dark); border-top: 0.5px solid var(--rule); pad
   <div class="footer-links">
     <a href="https://vimeo.com/zakwenning" target="_blank" rel="noopener">Vimeo</a>
     <a href="https://zakwenningphotography.pixieset.com/" target="_blank" rel="noopener">Pixieset</a>
-    <a href="mailto:zakary@zakarywenning.com">Email</a>
+    <a href="mailto:zakwenning@gmail.com">Email</a>
   </div>
 </footer>
 
